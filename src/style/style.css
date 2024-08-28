@@ -1,0 +1,127 @@
+/* logo netflix */
+.logo {
+  width: 10rem; /* Increase size */
+  filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(8000%)
+    hue-rotate(-10deg) brightness(100%) contrast(120%);
+  /* Increased brightness and contrast for a vivid red */
+  margin-left: 2rem; /* Move logo to the right */
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 10rem; /* Larger size for medium screens and up */
+    margin-left: 1rem; /* More margin for larger screens */
+  }
+}
+
+/* Checkbox */
+
+.custom-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #333;
+  border-radius: 0.25rem;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-checkbox:checked {
+  background-color: #e50914; /* Netflix red color */
+  border-color: #e50914;
+}
+
+.custom-checkbox:checked::after {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: solid #fff;
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0.2rem;
+  left: 0.3rem;
+}
+
+
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; 
+} */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .header .nav {
+    display: block; 
+  }
+
+  .header .nav a {
+    display: block;
+    margin: 0.5rem 0; 
+  }
+
+  .header .logo {
+    max-width: 100px; 
+  }
+}
+
+
+
+
+/* Global styles for an ultra-thin scrollbar */
+html {
+  scrollbar-width: thin; /* Firefox: thin scrollbar */
+  scrollbar-color: #888 #e0e0e0; /* Firefox: thumb color and track color */
+}
+
+/* WebKit Browsers (Chrome, Safari, Opera) */
+body::-webkit-scrollbar {
+  width: 6px; /* Very thin scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Light gray background for the track */
+  border-radius: 8px; /* Rounded corners for the track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888; /* Medium gray color for the thumb */
+  border-radius: 8px; /* Rounded corners for the thumb */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker gray on hover */
+}
+
+
+
+
+/* ShimmerEffect.css */
+
+.shimmer {
+  background: linear-gradient(90deg, #2d2d2d 25%, #3c3c3c 50%, #2d2d2d 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+
