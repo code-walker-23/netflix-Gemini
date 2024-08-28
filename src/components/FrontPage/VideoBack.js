@@ -1,37 +1,22 @@
-import React from 'react'
+import React from "react";
+const img =
+  "https://image.tmdb.org/t/p/original/stKGOm8UyhuLPR9sZLjs5AkmncA.jpg";
 
-const VideoBack = () => {
+const VideoBackground = () => {
   return (
-    <div>VideoBack</div>
-  )
-}
-
-export default VideoBack
-
-/* import React, { useState } from "react";
-import { getYouTubeTrailerUrl_MUTE } from "../../utils/constant";
-
-const VideoBackground = ({ id }) => {
-  const [trailer, setTrailer] = useState(null);
-
-  const youtubeKey = trailer?.key;
-  const youtubeTrailerUrl = getYouTubeTrailerUrl_MUTE(youtubeKey);
-
-  return (
-    <div className="w-screen">
-      {youtubeKey && (
-        <iframe
-          className="w-screen aspect-video absolute top-0 left-0 z-0 object-cover "
-          src={youtubeTrailerUrl}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      )}
+    <div className="w-screen h-screen relative overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="w-screen h-screen absolute top-0 left-0 bg-cover bg-center z-0"
+        style={{ backgroundImage: `url(${img})` }}
+      >
+        {/* Optional semi-transparent overlay */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+      {/* Add content on top if needed */}
+      <div className="relative z-10">{/* Your content goes here */}</div>
     </div>
   );
 };
 
 export default VideoBackground;
- */

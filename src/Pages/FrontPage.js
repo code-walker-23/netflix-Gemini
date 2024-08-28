@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import VideoTitle from "../components/FrontPage/VideoTitle";
+import VideoBack from "../components/FrontPage/VideoBack";
 import MainButton from "../components/FrontPage/MainButton";
 
 const MainContainer = () => {
@@ -9,10 +10,11 @@ const MainContainer = () => {
 
   if (!mainMovie) return null; // early return if mainMovie is falsy
 
-  const { original_title, overview, id } = mainMovie;
+  const { original_title, overview } = mainMovie;
 
   return (
     <div className="scrollable-element relative h-screen bg-black text-white overflow-hidden">
+      <VideoBack />
       <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 bg-gradient-to-t from-black via-transparent to-transparent">
         <VideoTitle title={original_title} overview={overview} />
         <MainButton></MainButton>
